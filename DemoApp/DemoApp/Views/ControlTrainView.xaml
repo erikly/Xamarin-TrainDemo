@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.Views.ControlTrainView">
+  <StackLayout>
+    <Label x:Name="TrainName" />
+    <Slider Minimum="0" Maximum="100" ></Slider>
+    <ListView x:Name="TrainFunctionList">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            
+          <Button Text="{Binding Name}"
+                  Clicked="CallTrainFunction"
+                  CommandParameter="{Binding Id}"></Button>
+          </ViewCell>
+
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
